@@ -1,0 +1,90 @@
+.container{
+    background: linear-gradient(135deg, red, rgb(255, 94, 0), yellow);
+    min-height: calc(100vh - 17px);
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+}
+
+.table1, .table2{
+    min-height: 70vh;
+    width: 30%;
+    background: linear-gradient(90deg, blue, lightgreen);
+    border-radius: 10px;
+}
+
+#leftBTN, #rightBTN{
+    height: 10vh;
+    width: 10%;
+    background: linear-gradient(225deg, green, white);
+    border-radius: 5px;
+}
+
+.t1-row1, .t2-row1{
+    display: flex;
+    justify-content: space-around;
+}
+
+.t1r1-input, .t2r1-input{
+    width: 60%;
+    border-radius: 10px;
+    background-color: lightcyan;
+}
+
+.t1r1-button, .t2r1-button{
+    background: linear-gradient(225deg, green, white);
+    border-radius: 15px;
+}
+
+.t1-row2, .t2-row2{
+    display: flex;
+    justify-content: center;
+    font-size: 17px;
+}
+
+.t1-list-container, .t2-list-container {
+    max-height: 50vh; /* Set a maximum height for the list container */
+    overflow-y: auto; /* Enable vertical scrollbar if content overflows */
+    padding: 10px; /* Add padding for better styling */
+}
+
+/*///////////////////////////////////////////////////*/
+
+ul li{
+    list-style: none;
+    user-select: none;
+    cursor: pointer;
+    position: relative;
+    padding-left: 20px;
+}
+ul li::before{
+    content: '';
+    height: 12px;
+    width: 12px;
+    border-radius: 50%;
+    background-color: rgb(160, 224, 32);
+    position: absolute;
+    top: 4px;
+    left: 0px;
+}
+ul li.checked{
+    color: red;
+    text-decoration: line-through;
+}
+ul li.checked::before{
+    background-color: red;
+}
+ul li span{
+    position: absolute;
+    color: red;
+    right: 15px;
+    font-size: 20px;
+    width: 20px;
+    height: 20px;
+    text-align: center;
+    border-radius: 50%;
+    background-color: gray;
+}
+ul li span:hover{
+    background: #edeef0;
+}
